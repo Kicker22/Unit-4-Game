@@ -1,0 +1,47 @@
+.title-container{
+    border: 1px solid black;
+}
+
+.rules-container{
+    border: 1px solid black;
+    height: fit-content;
+}
+
+.target-row{
+    border: 1px solid black;
+    width: 50%;
+    height: 8rem;
+    float: left;
+}
+
+.win-lose{
+    float: right;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.wins{
+    float: left;
+    margin-left: 2rem;
+}
+
+
+.losses{
+    float: right;
+    margin-right: 2rem;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+}
+.spacing{
+    margin-top: 2rem;
+    border: 1px solid black;
+    box-shadow: 2px 3px gray;
+}
+
+.total-score-container{
+    clear: both;
+    border: 1px solid black;
+}
