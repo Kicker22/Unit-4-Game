@@ -1,6 +1,6 @@
 var random = Math.floor(Math.random()*101) + 19;
-var gemNumber = Math.floor(Math.random() * 12) + 1;
-
+var buttonValue = [];
+console.log(buttonValue)
 
 function initGame(){
     setTargetNumber()
@@ -20,7 +20,7 @@ function setTargetNumber(){
     // sets random number between 19-120 for target number
     $("#target").text(random);
     // sets random number between 1-12 for each button
-    $(".button1").val(getRandomNumber()) ;
+    $(".button1").val(getRandomNumber());
     $(".button2").val(getRandomNumber());
     $(".button3").val(getRandomNumber());
     $(".button4").val(getRandomNumber());
@@ -28,27 +28,25 @@ function setTargetNumber(){
 
 //function that adds the value of the button clicked to user total
 
+// I actually wrote this myself!! i did have to look up a Way to convert The strings in my array to numbers.. wich led me to the map()method
 function addButtonValue(){
- var userValue = $(".userTotal").text()
- var targetvalue = $("#target").text()
- console.log(buttonValue)
+    $(".btn").on("click", function(){
+        buttonValue.push(this.value)
 
-     $(".button1").on("click", function(){
-         $(".userTotal").text()
-         
-     });
-     $(".button2").on("click", function(){
-         $(".userTotal").text()
-         
-     });
-     $(".button3").on("click", function(){
-         $(".userTotal").text()
-         
-     });
-     $(".button4").on("click", function(e){
-         $(".userTotal").text()
-         
-     });
+        // newButtonValue Converts my buttonValue array into numbers instead of string values
+       var newButtonValue = buttonValue.map(Number)
+       var sum = 0;
+        console.log(newButtonValue)
+
+        // this for loop adds all of the numbers in my array together as each button is clicked
+        for(i = 0; i < newButtonValue.length ; i++){
+            sum += newButtonValue[i];
+            console.log(sum)
+        }
+        // this sets the html of userTotal to the sum of my array
+        $(".userTotal").html(sum)
+
+    });
 
 }
 
