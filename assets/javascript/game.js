@@ -1,14 +1,17 @@
 var random = Math.floor(Math.random()*101) + 19;
 var buttonValue = [];
 var wins = 0;
-var loses = 0;
+var losses = 0;
+var newButtonValue = 0;
+var sum = 0;
+
 
 function initGame(){
     setTargetNumber()
     addButtonValue()
-
-
 }
+
+
 
 initGame()
 
@@ -37,32 +40,47 @@ function addButtonValue(){
         buttonValue.push(this.value)
 
         // newButtonValue Converts my buttonValue array into numbers instead of string values
-       var newButtonValue = buttonValue.map(Number)
-       var sum = 0;
+        newButtonValue = buttonValue.map(Number)
+        sum = 0;
 
         // this for loop adds all of the numbers in my array together as each button is clicked
         for(i = 0; i < newButtonValue.length ; i++){
             sum += newButtonValue[i];
             console.log(sum)
         }
-
-        // this sets the html of userTotal to the sum of my array
         $(".userTotal").html(sum)
-
-        var a =  parseInt($("#target").text())
-
-        //if statement that checks if user wins or loses;
-        if(sum > a){
-            alert("you lost")
-            // losses ++
-            initGame()
-        }else if(sum == a){
-            alert("you Win!")
-            // wins++
-            initGame()
-        }
+        
+        winOrLose()
     });
     
+}
+
+function winOrLose(){
+    // this sets the html of userTotal to the sum of my array
+
+    var a =  parseInt($("#target").text())
+
+    //if statement that checks if user wins or loses;
+    if(sum > a){
+        alert("you lost")
+        losses ++
+        $("#userLosses").text(losses)
+        reset()
+    }else if(sum == a){
+        alert("you Win!")
+        wins++
+        $("#userWins").text(wins)
+        reset()
+    }
+}
+
+function reset(){
+ setTargetNumber()
+ $(".userTotal").html('0')
+ random = Math.floor(Math.random()*101) + 19;
+ buttonValue = [];
+ newButtonValue = 0;
+ sum = 0
 }
 
        
