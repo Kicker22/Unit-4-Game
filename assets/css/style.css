@@ -8,32 +8,45 @@ body{
 }
 .container{
     color: white;
-    border: 1px dashed white;
-    background: rgb(0, 0, 0, 0.9)
+    background: rgb(0, 0, 0, 0.7)
 }
 
+.game-title-container h1{
+    font-size: 48px;
+}
 
+.game-title-container{
+    border: 2px dashed #FF9966;
+}
+
+/* this is for target number */
+.target-title{
+    border: 2px dashed #BA01FF;
+}
 
 
 
 
 .title-container{
+    
     width: 20%;
 }
 
 .rules-container{
+    border: 2px dashed 	#FFFF66;
     height: fit-content;
 }
 
 .target-row{
-    width: 50%;
+    width: 52%; 
     height: 8rem;
     float: left;
 }
 
 .win-lose{
+    border: 2px dashed #B6FF00;
     float: right;
-    width: 50%;
+    width: 52%;
 }
 
 .wins{
@@ -48,6 +61,7 @@ body{
 }
 
 .buttons-container{
+    border: 2px dashed #228DFF;
     display: flex;
     justify-content: center;
 }
@@ -57,64 +71,68 @@ body{
 }
 
 .total-score-container{
-    border: 1px dashed white;
+    border: 2px dashed #FF1177;
     clear: both;
-    
+
 }
 
-.buttons-container{
-    
+#target{
+    text-decoration: none;
 }
-.btn{
-    padding-top: 0;
+.number{
+    text-decoration: underline;
 }
+
 
 .button1{
+    background-image: url("../../assets/images/amethyst.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
     animation: glow1 2s infinite alternate;
 }
 .button2{
-    animation: glow2 2s infinite alternate;
+    animation: glow2 2.2s infinite alternate;
 }
 .button3{
-    animation: glow3 2s infinite alternate;
+    animation: glow3 2.4s infinite alternate;
 }
 .button4{
-    animation: glow4 2s infinite alternate;
+    animation: glow4 2.6s infinite alternate;
 }
 
 @keyframes glow1{
     
     from{
-        box-shadow: 0 0 5px -5px  #228DFF;;
+        box-shadow: 0 0 8px -8px  #228DFF;;
     }
     to{
-        box-shadow: 0 0 5px 5px  #228DFF;
+        box-shadow: 0 0 8px 8px  #228DFF;
     }
 }
 @keyframes glow2{
     
     from{
-        box-shadow: 0 0 5px -5px  #BA01FF;
+        box-shadow: 0 0 8px -8px  #BA01FF;
     }
     to{
-        box-shadow: 0 0 5px 5px   #BA01FF;
+        box-shadow: 0 0 8px 8px   #BA01FF;
     }
 }
 @keyframes glow3{
     
     from{
-        box-shadow: 0 0 5px -5px  #B6FF00;
+        box-shadow: 0 0 8px -8px  #B6FF00;
     }
     to{
-        box-shadow: 0 0 5px 5px   #B6FF00;
+        box-shadow: 0 0 8px 8px   #B6FF00;
     }
 }
 @keyframes glow4{
     
     from{
-        box-shadow: 0 0 5px -5px #FF1177;
+        box-shadow: 0 0 8px -8px #FF1177;
     }
     to{
-        box-shadow: 0 0 5px 5px   #FF1177;; 
+        box-shadow: 0 0 8px 8px   #FF1177;; 
     }
 }
