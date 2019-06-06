@@ -24,9 +24,6 @@ body{
     border: 2px dashed #BA01FF;
 }
 
-
-
-
 .title-container{
     
     width: 20%;
@@ -38,7 +35,7 @@ body{
 }
 
 .target-row{
-    width: 52%; 
+    width: 51%; 
     height: 8rem;
     float: left;
 }
@@ -65,9 +62,13 @@ body{
     display: flex;
     justify-content: center;
 }
+
+.card-body{
+    color: white;
+}
 .spacing{
     margin-top: 2rem;
-    box-shadow: 2px 3px gray;
+    /* box-shadow: 2px 3px gray; */
 }
 
 .total-score-container{
@@ -86,19 +87,29 @@ body{
 
 .button1{
     background-image: url("../../assets/images/amethyst.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     animation: glow1 2s infinite alternate;
 }
 .button2{
+    background-image: url("../../assets/images/amethyst.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     animation: glow2 2.2s infinite alternate;
 }
 .button3{
+    background-image: url("../../assets/images/amethyst.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     animation: glow3 2.4s infinite alternate;
 }
 .button4{
+    background-image: url("../../assets/images/amethyst.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     animation: glow4 2.6s infinite alternate;
 }
+
 
 @keyframes glow1{
     

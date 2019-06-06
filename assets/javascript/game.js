@@ -75,9 +75,9 @@ function winOrLose(){
 }
 
 function reset(){
+    random = Math.floor(Math.random()*101) + 19;
  setTargetNumber()
  $(".userTotal").html('0')
- random = Math.floor(Math.random()*101) + 19;
  buttonValue = [];
  newButtonValue = 0;
  sum = 0
